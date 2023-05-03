@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginHorizontal="@dimen/size_8"
+    android:layout_marginVertical="@dimen/size_8"
+    android:background="@drawable/rectangle_border"
+    android:padding="@dimen/size_4">
+
+    <ImageView
+        android:id="@+id/salon_people_image"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:src="@drawable/account_box"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/salon_people_name"
+        android:layout_width="@dimen/size_0"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/size_8"
+        android:text="Salon"
+        app:layout_constraintEnd_toStartOf="@id/salon_people_rating"
+        app:layout_constraintStart_toEndOf="@id/salon_people_image"
+        app:layout_constraintTop_toTopOf="@+id/salon_people_image" />
+
+    <RatingBar
+        android:id="@+id/salon_people_rating"
+        style="?android:attr/ratingBarStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:isIndicator="true"
+        android:numStars="5"
+        app:layout_constraintBottom_toBottomOf="@id/salon_people_name"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@id/salon_people_name" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/salon_people_service"
+        android:layout_width="@dimen/size_0"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/size_8"
+        android:layout_marginEnd="@dimen/size_8"
+        android:orientation="horizontal"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        app:layout_constraintBottom_toBottomOf="@+id/salon_people_image"
+        app:layout_constraintEnd_toStartOf="@id/salon_people_agenda"
+        app:layout_constraintStart_toStartOf="@+id/salon_people_name"
+        app:layout_constraintTop_toBottomOf="@+id/salon_people_name"
+        tools:text="Rua" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/salon_people_agenda"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:background="@android:color/holo_blue_light"
+        android:orientation="horizontal"
+        android:padding="@dimen/size_4"
+        app:layout_constraintBottom_toBottomOf="@id/salon_people_service"
+        app:layout_constraintCircleRadius="50dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/salon_people_service"
+        app:layout_constraintTop_toTopOf="@id/salon_people_service">
+
+        <ImageButton
+            android:id="@+id/agenda_icon"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_marginEnd="16dp"
+            android:background="@drawable/calendar_icon"
+            app:layout_constraintEnd_toStartOf="@id/agenda_icon"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:text="Agenda"
+            android:textColor="#FFFFFF"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="@id/agenda_icon"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/agenda_icon"
+            app:layout_constraintTop_toTopOf="@id/agenda_icon" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

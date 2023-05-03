@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="@android:color/darker_gray"
+    android:elevation="@dimen/size_4"
+    android:paddingBottom="@dimen/size_8">
+
+
+    <ImageView
+        android:id="@+id/service_img"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/size_135"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:srcCompat="@tools:sample/backgrounds/scenic" />
+
+    <TextView
+        android:id="@+id/service_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/size_8"
+        android:layout_marginTop="@dimen/size_16"
+        android:text="@string/service_name"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/service_img" />
+
+    <TextView
+        android:id="@+id/service_time_attendance"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/size_8"
+        android:text="@string/service_time_attendance"
+        app:layout_constraintStart_toStartOf="@+id/service_name"
+        app:layout_constraintTop_toBottomOf="@+id/service_name" />
+
+    <TextView
+        android:id="@+id/service_value"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/size_8"
+        android:text="@string/service_value"
+        app:layout_constraintStart_toStartOf="@+id/service_time_attendance"
+        app:layout_constraintTop_toBottomOf="@+id/service_time_attendance" />
+
+    <TextView
+        android:id="@+id/service_description"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/size_8"
+        android:layout_marginEnd="@dimen/size_8"
+        android:text="@string/service_description"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/service_value"
+        app:layout_constraintTop_toBottomOf="@+id/service_value" />
+
+    <TextView
+        android:id="@+id/button2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_margin="@dimen/size_4"
+        android:background="@android:color/darker_gray"
+        android:gravity="center_vertical"
+        android:paddingHorizontal="@dimen/size_4"
+        android:paddingVertical="2dp"
+        android:text="CLOSE"
+        android:textColor="@color/black"
+        android:textSize="12sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
