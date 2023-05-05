@@ -4,30 +4,42 @@ import android.app.Activity
 import android.content.Intent
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
+import androidx.fragment.app.FragmentTransaction
 import com.jt.mysalon.R
-import com.jt.mysalon.databinding.ActivitySalonBinding
+import com.jt.mysalon.databinding.ActivityEstablishmentBinding
+import com.jt.mysalon.ui.MapsFragment
 import com.jt.mysalon.utils.Constants.IntentKeys.ESTABLISHMENT_ID
 import dagger.hilt.android.AndroidEntryPoint
 
 @AndroidEntryPoint
 class EstablishmentActivity : AppCompatActivity() {
     private val binding by lazy {
-        ActivitySalonBinding.inflate(layoutInflater)
+        ActivityEstablishmentBinding.inflate(layoutInflater)
     }
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_salon)
+        setContentView(R.layout.activity_establishment)
         startHomeFragment()
+        startMapsFragment()
     }
 
     private fun startHomeFragment() {
-        supportFragmentManager.beginTransaction().replace(
+        this.supportFragmentManager.beginTransaction().replace(
             binding.salonContainer.id,
             EstablishmentFragment.newInstance(
                 establishmentId = getEstablishmentId(),
-            ),
-        ).commit()
+            )
+        ).addToBackStack(null).commit()
+    }
+
+    private fun startMapsFragment() {
+        this.supportFragmentManager.beginTransaction().replace(
+            binding.containerMaps.id,
+            MapsFragment.newInstance(
+                establishmentId = getEstablishmentId(),
+            )
+        ).addToBackStack(null).commit()
     }
 
     private fun getEstablishmentId() = intent.getStringExtra(ESTABLISHMENT_ID)

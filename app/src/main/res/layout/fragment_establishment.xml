@@ -6,14 +6,6 @@
     android:layout_height="match_parent"
     tools:context=".ui.salon.EstablishmentFragment">
 
-    <ImageView
-        android:id="@+id/salon_location_map"
-        android:layout_width="match_parent"
-        android:layout_height="150dp"
-        android:background="@android:color/holo_blue_light"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
-
     <TextView
         android:id="@+id/salon_name"
         android:layout_width="@dimen/size_0"
@@ -24,7 +16,7 @@
         app:layout_constraintBottom_toTopOf="@id/recycler_establishment"
         app:layout_constraintEnd_toStartOf="@id/salon_rating"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/salon_location_map"
+        app:layout_constraintTop_toTopOf="parent"
         tools:text="Salão do João" />
 
     <RatingBar

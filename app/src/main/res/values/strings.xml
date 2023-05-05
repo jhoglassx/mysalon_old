@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">mysalon</string>
+    <string name="app_name">My Salon</string>
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="title_activity_schedule">ScheduleActivity</string>
     <string name="service_name">Service: %s</string>
@@ -17,4 +17,8 @@
     <string name="login">Login</string>
     <string name="login_with_google">Login With Google</string>
     <string name="new_youser_info">If you are a new youser click here</string>
+    <string name="agenda">Agenda</string>
+    <string name="Scheduling">Scheduling</string>
+    <string name="profile">Profile</string>
+    <string name="search">Search</string>
 </resources>

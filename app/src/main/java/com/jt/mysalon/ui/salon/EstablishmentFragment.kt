@@ -8,7 +8,7 @@ import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
 import com.example.marvelapp.framework.imageloader.ImageLoader
-import com.jt.mysalon.databinding.FragmentSalonBinding
+import com.jt.mysalon.databinding.FragmentEstablishmentBinding
 import com.jt.mysalon.domain.entity.ProfessionalDomainEntity
 import com.jt.mysalon.ui.salon.adapter.SalonProfessionalAdapter
 import com.jt.mysalon.ui.schedule.ScheduleActivity
@@ -20,7 +20,7 @@ import javax.inject.Inject
 class EstablishmentFragment : Fragment() {
 
     private val binding by lazy {
-        FragmentSalonBinding.inflate(layoutInflater)
+        FragmentEstablishmentBinding.inflate(layoutInflater)
     }
 
     @Inject

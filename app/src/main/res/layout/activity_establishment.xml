@@ -7,7 +7,7 @@
     tools:context=".ui.salon.EstablishmentActivity">
 
     <androidx.appcompat.widget.Toolbar
-        android:id="@+id/salon_toolbar"
+        android:id="@+id/toolbar"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         app:layout_constraintEnd_toEndOf="parent"
@@ -15,13 +15,26 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <androidx.fragment.app.FragmentContainerView
+        android:id="@+id/container_maps"
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        app:defaultNavHost="false"
+        app:layout_constraintBottom_toTopOf="@id/salon_container"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/toolbar"
+        android:name="com.jt.mysalon.ui.MapsFragment" />
+
+    <androidx.fragment.app.FragmentContainerView
         android:id="@+id/salon_container"
         android:layout_width="match_parent"
         android:layout_height="@dimen/size_0"
+        app:layout_constraintHeight_percent="0.7"
         app:defaultNavHost="true"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/salon_toolbar" />
+        app:layout_constraintTop_toBottomOf="@id/container_maps"
+        android:name="com.jt.mysalon.ui.salon.EstablishmentFragment" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
