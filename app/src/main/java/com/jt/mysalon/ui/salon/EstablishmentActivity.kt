@@ -44,6 +44,7 @@ class EstablishmentActivity : AppCompatActivity() {
 
     private fun getEstablishmentId() = intent.getStringExtra(ESTABLISHMENT_ID)
 
+
     companion object {
         fun launcherIntent(
             activity: Activity,
